@@ -70,14 +70,14 @@ In case of failure, the API will return any of these errors:
 - Request Arguments: None
 - Returns: A JSON object with a single key, `categories`, that contains an object of `id: category_string` key: value pairs.
 <br />
-`{
-    'categories': { '1' : "Science",
-    '2' : "Art",
-    '3' : "Geography",
-    '4' : "History",
-    '5' : "Entertainment",
-    '6' : "Sports" }
-}`
+{<br />
+    'categories': { '1' : "Science",<br />
+    '2' : "Art",<br />
+    '3' : "Geography",<br />
+    '4' : "History",<br />
+    '5' : "Entertainment",<br />
+    '6' : "Sports" }<br />
+}
 
 
 ---
