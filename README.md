@@ -12,25 +12,15 @@ From the backend folder run:
 This will install all the packages required for the frontend in your local machine.
 
 If you have errors with depracated versions of package installation write manualy:
-pip install --upgrade aniso8601
-pip install --upgrade Click
-pip install --upgrade Flask
-pip install --upgrade Flask-Cors
-pip install --upgrade Flask-RESTful
-pip install --upgrade Flask-SQLAlchemy
-pip install --upgrade itsdangerous
-pip install --upgrade Jinja2
-pip install --upgrade MarkupSafe
-pip install --upgrade psycopg2-binary
-pip install --upgrade pytz
-pip install --upgrade six
-pip install --upgrade SQLAlchemy
-pip install --upgrade Werkzeug
+<br />
+
+pip install --upgrade <package_name> for all the packages<br />
+
 
 To run the application, go to /backend directory and run the following commands:
-export FLASK_APP=flaskr
-export FLASK_DEBUG=1
-flask run
+export FLASK_APP=flaskr<br />
+export FLASK_DEBUG=1<br />
+flask run<br />
 
 These commands will put the application in development and directs our application to use the __init__.py file inside our flaskr folder.
 
@@ -47,8 +37,8 @@ This will install all the dependencies for the frontend in your local machine.
 
 If you run into problems related to socket timeout, please consider changing timeouts. 
 A possible timeout is
-npm config set fetch-retry-mintimeout 20000
-npm config set fetch-retry-maxtimeout 120000
+npm config set fetch-retry-mintimeout 20000<br />
+npm config set fetch-retry-maxtimeout 120000<br />
 
 To start the application run:
     npm start
@@ -61,11 +51,11 @@ Base URL: this api is hosted locally and its base url is the same provided when 
 http://127.0.0.1:<application_port_number>/
 
 #### Error handling ####
-Errors are returned as JSON objects following this format:
-    {
-        "success": False,
-        "error": 404,
-        "message": "resource not found"
+Errors are returned as JSON objects following this format:<br />
+    {<br />
+        "success": False,<br />
+        "error": 404,<br />
+        "message": "resource not found"<br />
     }
 
 In case of failure, the API will return any of these errors: 
@@ -79,15 +69,15 @@ In case of failure, the API will return any of these errors:
 - Fetches a dictionary of categories. The keys are ids and the values are the categories.
 - Request Arguments: None
 - Returns: A JSON object with a single key, `categories`, that contains an object of `id: category_string` key: value pairs.
-
-{
+<br />
+`{
     'categories': { '1' : "Science",
     '2' : "Art",
     '3' : "Geography",
     '4' : "History",
     '5' : "Entertainment",
     '6' : "Sports" }
-}
+}`
 
 
 ---
@@ -99,26 +89,26 @@ In case of failure, the API will return any of these errors:
 - Request Arguments: `page` - integer
 - Returns: A JSON object with 10 paginated questions, total questions, object including all categories, and current category string
 
-{
-  "questions": [
-    {
-      "id": 1,
-      "question": "This is a question",
-      "answer": "This is an answer",
-      "difficulty": 5,
-      "category": 2
-    }
+{<br />
+  "questions": [<br />
+    {<br />
+      "id": 1,<br />
+      "question": "This is a question",<br />
+      "answer": "This is an answer",<br />
+      "difficulty": 5,<br />
+      "category": 2<br />
+    }<br />
   ],
-  "totalQuestions": 100,
-  "categories": {
-    "1": "Science",
-    "2": "Art",
-    "3": "Geography",
-    "4": "History",
-    "5": "Entertainment",
-    "6": "Sports"
-  },
-  "currentCategory": "History"
+  "totalQuestions": 100,<br />
+  "categories": {<br />
+    "1": "Science",<br />
+    "2": "Art",<br />
+    "3": "Geography",<br />
+    "4": "History",<br />
+    "5": "Entertainment",<br />
+    "6": "Sports"<br />
+  },<br />
+  "currentCategory": "History"<br />
 }
 
 
@@ -132,18 +122,18 @@ In case of failure, the API will return any of these errors:
 - Returns: A JSON object containing the list of questions, total questions and current category
 
 
-{
-  "questions": [
-    {
-      "id": 1,
-      "question": "This is a question",
+{<br />
+  "questions": [<br />
+    {<br />
+      "id": 1,<br />
+      "question": "This is a question",<br />
       "answer": "This is an answer",
-      "difficulty": 5,
-      "category": 4
-    }
-  ],
-  "totalQuestions": 100,
-  "currentCategory": "History"
+      "difficulty": 5,<br />
+      "category": 4<br />
+    }<br />
+  ],<br />
+  "totalQuestions": 100,<br />
+  "currentCategory": "History"<br />
 }
 
 
@@ -157,9 +147,9 @@ In case of failure, the API will return any of these errors:
 - Returns: A JSON object containing the success state and the id of the deleted question
 
 
-{
-    "success": True, 
-    "deleted_id": question_id
+{<br />
+    "success": True, <br />
+    "deleted_id": question_id<br />
 }
 
 
@@ -172,23 +162,23 @@ In case of failure, the API will return any of these errors:
 - Request Body:
 
 ```json
-{
-    'previous_questions': [1, 4, 20, 15]
-    quiz_category': 'current category'
+{<br />
+    'previous_questions': [1, 4, 20, 15]<br />
+    quiz_category': 'current category'<br />
  }
 ```
 
 - Returns: A JSON object of the single new question object
 
 
-{
-  "question": {
-    "id": 1,
-    "question": "This is a question",
-    "answer": "This is an answer",
-    "difficulty": 5,
-    "category": 4
-  }
+{<br />
+  "question": {<br />
+    "id": 1,<br />
+    "question": "This is a question",<br />
+    "answer": "This is an answer",<br />
+    "difficulty": 5,<br />
+    "category": 4<br />
+  }<br />
 }
 
 
@@ -201,18 +191,18 @@ In case of failure, the API will return any of these errors:
 - Request Body:
 
 ```json
-{
-  "question": "Heres a new question string",
-  "answer": "Heres a new answer string",
-  "difficulty": 1,
-  "category": 3
+{<br />
+  "question": "Heres a new question string",<br />
+  "answer": "Heres a new answer string",<br />
+  "difficulty": 1,<br />
+  "category": 3<br />
 }
 ```
 
 - Returns: A JSON object containing the success state and the id of the created question
-{
-    "success": True, 
-    "created_id": new_question.id
+{<br />
+    "success": True, <br />
+    "created_id": new_question.id<br />
 }
 
 
@@ -233,16 +223,16 @@ In case of failure, the API will return any of these errors:
 - Returns: A JSON object containing a list of questions, a number of totalQuestions meeting the search term and the current category
 
 
-{
-  "questions": [
-    {
-      "id": 1,
-      "question": "This is a question",
-      "answer": "This is an answer",
-      "difficulty": 5,
-      "category": 5
-    }
-  ],
-  "totalQuestions": 100,
-  "currentCategory": "Entertainment"
-}
+{<br />
+  "questions": [<br />
+    {<br />
+      "id": 1,<br />
+      "question": "This is a question",<br />
+      "answer": "This is an answer",<br />
+      "difficulty": 5,<br />
+      "category": 5<br />
+    }<br />
+  ],<br />
+  "totalQuestions": 100,<br />
+  "currentCategory": "Entertainment"<br />
+}<br />
